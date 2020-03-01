@@ -38,3 +38,24 @@ print (compare(a: Rank.ace, b: Rank.jack))
 if let convertedRank = Rank(rawValue: 3) {
     let threeDescription = convertedRank.simpleDescription()
 }
+
+
+enum Suit {
+    case spades, hearts, diamonds, clubs
+    
+    func simpleDescription() -> String {
+        switch self {
+        case .spades: return "Spades"
+        case .hearts: return "Hearts"
+        case .diamonds: return "Diamonds"
+        case .clubs: return "Clubs"
+        }
+    }
+    
+    func color() -> String{
+        switch self {
+        case .spades: return "black"
+        case .diamonds: return "red"
+        }
+    }
+}
