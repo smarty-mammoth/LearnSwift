@@ -22,7 +22,19 @@ enum Rank : Int {
     }
 }
 
+func compare(a:Rank, b:Rank) -> Int {
+    if a.rawValue == b.rawValue { return 0 }
+    if a.rawValue < b.rawValue { return -1 }
+    if a.rawValue > b.rawValue { return 1 }
+    return 0
+}
+
 let rank = Rank.ace
 let iRank = rank.rawValue
 let descr = rank.simpleDescription()
+print (compare(a: Rank.ace, b: Rank.jack))
 
+
+if let convertedRank = Rank(rawValue: 3) {
+    let threeDescription = convertedRank.simpleDescription()
+}
